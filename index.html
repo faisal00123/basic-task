@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexeAgent - Animated UI Components</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Nexe<span>Agent</span></a>
+            <ul class="nav-links">
+                <li><a href="#modal-demo">Modal</a></li>
+                <li><a href="#sidebar-demo">Sidebar</a></li>
+                <li><a href="#accordion-demo">Accordion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-hero">
+        <div class="hero-content">
+            <span class="hero-badge">✨ Animated Components</span>
+            <h1>Interactive UI <span class="gradient-text">Components</span></h1>
+            <p>Built with <strong>Framer Motion</strong> for smooth, delightful animations. Click on each component to see the magic.</p>
+        </div>
+    </section>
+
+    <!-- Modal Demo -->
+    <section class="demo-section" id="modal-demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Component 1</span>
+                <h2 class="section-title">Animated <span class="gradient-text">Modal</span></h2>
+                <p class="section-subtitle">A sleek modal dialog with spring-based entrance and exit animations.</p>
+            </div>
+            <div class="demo-area">
+                <button class="btn-primary" id="openModal">
+                    <i class="fas fa-window-restore"></i> Open Modal
+                </button>
+                <p class="demo-hint">Click the button above to see the modal animation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar Demo -->
+    <section class="demo-section" id="sidebar-demo" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Component 2</span>
+                <h2 class="section-title">Animated <span class="gradient-text">Sidebar</span></h2>
+                <p class="section-subtitle">A responsive sidebar with smooth slide-in animation and overlay.</p>
+            </div>
+            <div class="demo-area">
+                <button class="btn-primary" id="openSidebar">
+                    <i class="fas fa-bars"></i> Open Sidebar
+                </button>
+                <p class="demo-hint">Click the button or swipe from the left to open the sidebar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion Demo -->
+    <section class="demo-section" id="accordion-demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Component 3</span>
+                <h2 class="section-title">Animated <span class="gradient-text">Accordion</span></h2>
+                <p class="section-subtitle">Smooth expandable accordion with spring-based animations.</p>
+            </div>
+            <div class="accordion-container" id="accordionContainer">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-dark">
+        <p>&copy; 2026 NexeAgent. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Overlay & Panel -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-panel animate-in" id="modalPanel">
+            <div class="modal-header">
+                <h3><i class="fas fa-rocket"></i> Welcome to NexeAgent</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This modal is powered by <strong>Framer Motion</strong> with spring-based animations for an ultra-smooth experience.</p>
+                <div class="modal-features">
+                    <div class="modal-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Spring Animations</span>
+                    </div>
+                    <div class="modal-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>GPU-Accelerated Transitions</span>
+                    </div>
+                    <div class="modal-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Layout-Aware</span>
+                    </div>
+                    <div class="modal-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Gesture Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="closeModalFooter">Close</button>
+                <button class="btn-primary">Get Started <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay">
+        <div class="sidebar-overlay-bg"></div>
+        <div class="sidebar-panel animate-in-slide" id="sidebarPanel">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+                <button class="sidebar-close" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-home"></i><span>Home</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-chart-bar"></i><span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-users"></i><span>Customers</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-cog"></i><span>Settings</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-bell"></i><span>Notifications</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i><span>Help Center</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://i.pravatar.cc/60?img=68" alt="User">
+                    </div>
+                    <div>
+                        <h4>Alex Morgan</h4>
+                        <span>alex@nexeagent.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
